@@ -1,16 +1,12 @@
 extends Area2D
 
-export var velocity = 500
+const SPEED = 600
 
 var _vel := Vector2()
+var _x_coordinate = 0
 
 func _ready():
 	pass
 	
-	
-func _process(delta):
-	_vel.y -= velocity * delta
-	self.position = _vel
-	
-func set_fire_position(start_position):
-	self.position = start_position
+func _physics_process(delta):
+	position += transform.y * -SPEED * delta
