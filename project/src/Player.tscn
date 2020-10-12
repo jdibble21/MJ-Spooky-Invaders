@@ -7,13 +7,17 @@
 radius = 24.8484
 
 [node name="Player" type="Area2D"]
+position = Vector2( 120.908, 107.682 )
 script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="Sprite" type="Sprite" parent="."]
-position = Vector2( 454.518, 250.81 )
+position = Vector2( 383.749, 402.477 )
 scale = Vector2( 4.21721, 4.16442 )
 texture = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 454.938, 252.073 )
+position = Vector2( 384.55, 404.132 )
 shape = SubResource( 1 )
