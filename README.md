@@ -1,5 +1,11 @@
 # Midsemester Jam
 
+## How to play
+
+Use left and right arrows to move side to side
+
+Use spacebar to fire
+
 - [ ] D-1: The repository link is submitted to Canvas before the project deadline.
 - [ ] D-2: The repository contains a <code>README.md</code> file in its top-level directory.
 - [ ] D-3: The project content is eligible for an <a href="https://www.esrb.org/ratings-guide/">ESRB Rating</a> of M or less.

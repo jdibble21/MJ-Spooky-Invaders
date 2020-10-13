@@ -17,5 +17,7 @@ texture = ExtResource( 2 )
 position = Vector2( 493.946, 557.299 )
 shape = SubResource( 1 )
 
-[node name="Muzzle" type="Position2D" parent="."]
-position = Vector2( 493.915, 546.724 )
+[node name="Muzzle" type="Position2D" parent="." groups=[
+"player",
+]]
+position = Vector2( 493.919, 546.575 )

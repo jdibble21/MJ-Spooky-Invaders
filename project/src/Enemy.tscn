@@ -31,7 +31,9 @@ animations = [ {
 [sub_resource type="CircleShape2D" id=3]
 radius = 23.8158
 
-[node name="Enemy" type="KinematicBody2D"]
+[node name="Enemy" type="KinematicBody2D" groups=[
+"invader",
+]]
 position = Vector2( 325.417, 167.471 )
 script = ExtResource( 3 )
 
@@ -46,4 +48,8 @@ animation = "destroyed"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox"]
 shape = SubResource( 3 )
+
+[node name="PlayerChecker" type="RayCast2D" parent="."]
+enabled = true
+cast_to = Vector2( 0, 500 )
 [connection signal="area_entered" from="HitBox" to="." method="_on_HitBox_area_entered"]
