@@ -4,7 +4,7 @@ extends KinematicBody2D
 const BULLET = preload("res://src/PlayerBullet.tscn")
 export var velocity := 600
 var _current_pos := Vector2()
-
+var _regular_fire_speed := true
 func _ready():
 	pass
 
