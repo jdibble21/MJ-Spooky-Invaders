@@ -1,10 +1,14 @@
 # Midsemester Jam
 
+Spooky Invaders is a halloween themed arcade game built off the concept of Space Invaders
+
 ## How to play
 
 Use left and right arrows to move side to side
 
 Use spacebar to fire
+
+## Project Report
 
 - [ ] D-1: The repository link is submitted to Canvas before the project deadline.
 - [ ] D-2: The repository contains a <code>README.md</code> file in its top-level directory.

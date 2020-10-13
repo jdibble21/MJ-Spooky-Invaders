@@ -15,4 +15,4 @@ func _physics_process(delta):
 
 func _on_PlayerBullet_body_entered(body):
 	queue_free()
-	print("HIT!")
+	
