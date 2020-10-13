@@ -1,5 +1,6 @@
 extends KinematicBody2D
 
+const ENEMY_BULLET = preload("res://src/EnemyBullet.tscn")
 onready var raycaster = $PlayerChecker
 
 func _ready():
@@ -7,7 +8,7 @@ func _ready():
 
 func _physics_process(delta):
 	if raycaster.is_colliding():
-		print("see player!!")
+		_fire()
 	
 	
 func _on_HitBox_area_entered(_area):
@@ -17,5 +18,10 @@ func _on_HitBox_area_entered(_area):
 	timer.start()
 	$AnimatedSprite.play("destroyed")
 	yield(timer, "timeout")
-	
 	queue_free()
+	
+func _fire():
+	var b = ENEMY_BULLET.instance()
+	owner.add_child(b)
+	b.transform = $Muzzle.global_transform
+	

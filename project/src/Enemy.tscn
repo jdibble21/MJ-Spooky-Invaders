@@ -52,4 +52,7 @@ shape = SubResource( 3 )
 [node name="PlayerChecker" type="RayCast2D" parent="."]
 enabled = true
 cast_to = Vector2( 0, 500 )
+
+[node name="Muzzle" type="Position2D" parent="."]
+position = Vector2( 0, 25 )
 [connection signal="area_entered" from="HitBox" to="." method="_on_HitBox_area_entered"]

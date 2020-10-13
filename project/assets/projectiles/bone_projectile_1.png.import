@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/bone_projectile.png-e250791f02b019cb0ec8b1b3a11f86a7.stex"
+path="res://.import/bone_projectile_1.png-a6821b68e46e0198292d00a4565cb718.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/bone_projectile.png"
-dest_files=[ "res://.import/bone_projectile.png-e250791f02b019cb0ec8b1b3a11f86a7.stex" ]
+source_file="res://assets/projectiles/bone_projectile_1.png"
+dest_files=[ "res://.import/bone_projectile_1.png-a6821b68e46e0198292d00a4565cb718.stex" ]
 
 [params]
 
