@@ -1,9 +1,13 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://assets/candy_player_projectile.png" type="Texture" id=1]
 [ext_resource path="res://src/PlayerBullet.gd" type="Script" id=2]
 
+[sub_resource type="CapsuleShape2D" id=1]
+height = 3.75
+
 [node name="PlayerBullet" type="Area2D"]
+scale = Vector2( 0.75, 1 )
 script = ExtResource( 2 )
 __meta__ = {
 "_edit_group_": true
@@ -14,3 +18,7 @@ texture = ExtResource( 1 )
 __meta__ = {
 "_edit_group_": true
 }
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 1 )
+[connection signal="body_entered" from="." to="." method="_on_PlayerBullet_body_entered"]
