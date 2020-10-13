@@ -1,28 +1,21 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://src/Player.gd" type="Script" id=1]
 [ext_resource path="res://assets/character_sprites/player_sprite.png" type="Texture" id=2]
-[ext_resource path="res://src/PlayerBullet.tscn" type="PackedScene" id=3]
 
 [sub_resource type="CircleShape2D" id=1]
-radius = 21.9054
+radius = 6.61748
 
-[node name="Player" type="Area2D"]
-position = Vector2( 221.81, 145.829 )
+[node name="Player" type="KinematicBody2D"]
 script = ExtResource( 1 )
-__meta__ = {
-"_edit_group_": true
-}
-Bullet = ExtResource( 3 )
 
 [node name="Sprite" type="Sprite" parent="."]
-position = Vector2( 0.883514, 0.0111084 )
-scale = Vector2( 4.21721, 4.16442 )
+position = Vector2( 494.281, 556.679 )
 texture = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 1.54195, -0.369354 )
+position = Vector2( 493.946, 557.299 )
 shape = SubResource( 1 )
 
 [node name="Muzzle" type="Position2D" parent="."]
-position = Vector2( 0.471954, -39.0809 )
+position = Vector2( 493.915, 546.724 )

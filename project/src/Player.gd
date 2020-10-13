@@ -1,12 +1,12 @@
 # Controls player input and firing of projectiles
-extends Area2D
+extends KinematicBody2D
 
-export (PackedScene) var Bullet
+const BULLET = preload("res://src/PlayerBullet.tscn")
 export var velocity := 600
 var _current_pos := Vector2()
 
 func _ready():
-	position = Vector2(527.058,285.587)
+	pass
 
 
 func _process(delta):
@@ -20,6 +20,7 @@ func _process(delta):
 	
 	
 func _fire():
-	var b = Bullet.instance()
-	add_child(b)
+	var b = BULLET.instance()
+	owner.add_child(b)
 	b.transform = $Muzzle.global_transform
+	
