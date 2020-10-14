@@ -3,6 +3,12 @@
 extends Area2D
 
 const ENEMY = preload("res://src/Enemy.tscn")
+const RESPAWN_DELAY = 2.5
+const SPEED = 50
+
+var _current_velocity = Vector2()
+var _screen_edge = ProjectSettings.get_setting("display/window/size/width")
+var _moving_left := true
 
 onready var _spawn_one = $Spawn1.position
 onready var _spawn_two = $Spawn2.position
@@ -15,7 +21,17 @@ func _ready():
 	for current_pos in pos_array:
 		_initial_spawn(current_pos)
 	
-
+func _physics_process(delta):
+	if _current_velocity.x == _screen_edge:
+		_moving_left = false
+	if _current_velocity.x == 0:
+		_moving_left = true
+	if _moving_left:
+		_current_velocity.x = SPEED
+	if !(_moving_left):
+		_current_velocity.x = -SPEED
+	position += transform.x * _current_velocity * delta
+	
 func _initial_spawn(spawn_position):
 		var inst_enemy = ENEMY.instance()
 		add_child(inst_enemy)
@@ -25,7 +41,7 @@ func _initial_spawn(spawn_position):
 func _on_Spawn1_area_exited(area):
 	if !(area.is_in_group("player_bullet")):
 		var timer = Timer.new()
-		timer.set_wait_time(2.5)
+		timer.set_wait_time(RESPAWN_DELAY)
 		add_child(timer)
 		timer.start()
 		print("about to respawn spawn1...")
@@ -38,7 +54,7 @@ func _on_Spawn1_area_exited(area):
 func _on_Spawn2_area_exited(area):
 	if !(area.is_in_group("player_bullet")):
 		var timer = Timer.new()
-		timer.set_wait_time(2.5)
+		timer.set_wait_time(RESPAWN_DELAY)
 		add_child(timer)
 		timer.start()
 		print("about to respawn spawn2...")
@@ -51,7 +67,7 @@ func _on_Spawn2_area_exited(area):
 func _on_Spawn3_area_exited(area):
 	if !(area.is_in_group("player_bullet")):
 		var timer = Timer.new()
-		timer.set_wait_time(2.5)
+		timer.set_wait_time(RESPAWN_DELAY)
 		add_child(timer)
 		timer.start()
 		print("about to respawn spawn3...")
@@ -64,7 +80,7 @@ func _on_Spawn3_area_exited(area):
 func _on_Spawn4_area_exited(area):
 	if !(area.is_in_group("player_bullet")):
 		var timer = Timer.new()
-		timer.set_wait_time(2.5)
+		timer.set_wait_time(RESPAWN_DELAY)
 		add_child(timer)
 		timer.start()
 		print("about to respawn spawn3...")
@@ -77,7 +93,7 @@ func _on_Spawn4_area_exited(area):
 func _on_Spawn5_area_exited(area):
 	if !(area.is_in_group("player_bullet")):
 		var timer = Timer.new()
-		timer.set_wait_time(2.5)
+		timer.set_wait_time(RESPAWN_DELAY)
 		add_child(timer)
 		timer.start()
 		print("about to respawn spawn3...")
