@@ -12,10 +12,10 @@
 [ext_resource path="res://assets/effect_animations/enemy_destroyed_6.png" type="Texture" id=10]
 [ext_resource path="res://assets/effect_animations/enemy_destroyed_3.png" type="Texture" id=11]
 
-[sub_resource type="CircleShape2D" id=2]
+[sub_resource type="CircleShape2D" id=1]
 radius = 23.747
 
-[sub_resource type="SpriteFrames" id=1]
+[sub_resource type="SpriteFrames" id=2]
 animations = [ {
 "frames": [ ExtResource( 2 ), ExtResource( 1 ) ],
 "loop": true,
@@ -34,14 +34,13 @@ radius = 23.8158
 [node name="Enemy" type="KinematicBody2D" groups=[
 "invader",
 ]]
-position = Vector2( 325.417, 167.471 )
 script = ExtResource( 3 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource( 2 )
+shape = SubResource( 1 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
-frames = SubResource( 1 )
+frames = SubResource( 2 )
 animation = "destroyed"
 
 [node name="HitBox" type="Area2D" parent="."]

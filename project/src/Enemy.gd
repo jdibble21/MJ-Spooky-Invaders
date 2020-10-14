@@ -22,18 +22,20 @@ func _physics_process(delta):
 			_just_fired = false
 	
 	
-func _on_HitBox_area_entered(_area):
-	var timer = Timer.new()
-	timer.set_wait_time(0.25)
-	add_child(timer)
-	timer.start()
-	$AnimatedSprite.play("destroyed")
-	yield(timer, "timeout")
-	queue_free()
+func _on_HitBox_area_entered(area):
+	if area.is_in_group("player_bullet"):
+		var timer = Timer.new()
+		timer.set_wait_time(0.25)
+		add_child(timer)
+		timer.start()
+		$AnimatedSprite.play("destroyed")
+		yield(timer, "timeout")
+		queue_free()
 	
 	
 func _fire():
 	var b = ENEMY_BULLET.instance()
-	owner.add_child(b)
+	var root_attach = get_tree().get_root().get_node("Level")
+	root_attach.add_child(b)
 	b.transform = $Muzzle.global_transform
 	

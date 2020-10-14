@@ -6,7 +6,9 @@
 [sub_resource type="CapsuleShape2D" id=1]
 height = 3.75
 
-[node name="PlayerBullet" type="Area2D"]
+[node name="PlayerBullet" type="Area2D" groups=[
+"player_bullet",
+]]
 scale = Vector2( 0.75, 1 )
 script = ExtResource( 2 )
 __meta__ = {
