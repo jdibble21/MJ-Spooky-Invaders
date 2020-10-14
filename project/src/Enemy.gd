@@ -35,6 +35,7 @@ func _on_HitBox_area_entered(area):
 	
 func _fire():
 	var b = ENEMY_BULLET.instance()
+	# get_node is necessary here to avoid null instance errors
 	var root_attach = get_tree().get_root().get_node("Level")
 	root_attach.add_child(b)
 	b.transform = $Muzzle.global_transform

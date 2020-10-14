@@ -1,6 +1,8 @@
 # Controls player input and firing of projectiles
 extends KinematicBody2D
 
+signal player_defeated
+
 const BULLET = preload("res://src/PlayerBullet.tscn")
 
 export var velocity := 600
