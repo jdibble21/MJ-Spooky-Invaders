@@ -4,7 +4,7 @@
 [ext_resource path="res://assets/character_sprites/player_sprite.png" type="Texture" id=2]
 
 [sub_resource type="CircleShape2D" id=1]
-radius = 6.61748
+radius = 19.7991
 
 [node name="Player" type="KinematicBody2D"]
 script = ExtResource( 1 )
@@ -14,10 +14,10 @@ position = Vector2( 494.281, 556.679 )
 texture = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 493.946, 557.299 )
+position = Vector2( 495.946, 557.299 )
 shape = SubResource( 1 )
 
 [node name="Muzzle" type="Position2D" parent="." groups=[
 "player",
 ]]
-position = Vector2( 493.919, 546.575 )
+position = Vector2( 495.919, 535.575 )

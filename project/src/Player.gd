@@ -12,9 +12,8 @@ func _ready():
 
 
 func _process(delta):
-	
 	if Input.is_action_just_pressed("fire"):
-			_fire()
+		_fire()
 	if Input.is_action_pressed("move_left"):
 		_current_pos.x -= velocity * delta
 	if Input.is_action_pressed("move_right"):
