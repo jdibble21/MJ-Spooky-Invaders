@@ -4,16 +4,18 @@ const ENEMY_BULLET = preload("res://src/EnemyBullet.tscn")
 onready var raycaster = $PlayerChecker
 var _fire_delay := 0.0
 var _just_fired := false
-var _next_fire_time := 0.6
+var _next_fire_time := 1.0
 
 func _ready():
 	$AnimatedSprite.play("idle")
+	
 
 
 func _physics_process(delta):
 	if _just_fired:
 		_fire_delay = _fire_delay + 0.01
 	if raycaster.is_colliding():
+		
 		if _fire_delay == 0:
 			_fire()
 			_just_fired = true

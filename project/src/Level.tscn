@@ -8,5 +8,6 @@
 script = ExtResource( 3 )
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
+collision_layer = 31
 
 [node name="SpawnPoints" parent="." instance=ExtResource( 4 )]

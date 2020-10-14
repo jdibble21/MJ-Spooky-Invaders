@@ -19,21 +19,21 @@ position = Vector2( 154, 71 )
 shape = SubResource( 1 )
 
 [node name="Spawn2" type="Area2D" parent="."]
-position = Vector2( 234, 71 )
+position = Vector2( 244, 71 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Spawn2"]
 position = Vector2( 0.133652, 0.100037 )
 shape = SubResource( 2 )
 
 [node name="Spawn3" type="Area2D" parent="."]
-position = Vector2( 314, 71 )
+position = Vector2( 334, 71 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Spawn3"]
 position = Vector2( 0.133652, 0.100037 )
 shape = SubResource( 2 )
 
 [node name="Spawn4" type="Area2D" parent="."]
-position = Vector2( 394, 71 )
+position = Vector2( 424, 71 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Spawn4"]
 position = Vector2( 0.133652, 0.100037 )
@@ -47,21 +47,21 @@ position = Vector2( 0.133652, 0.100037 )
 shape = SubResource( 2 )
 
 [node name="Spawn6" type="Area2D" parent="."]
-position = Vector2( 234, 150 )
+position = Vector2( 244, 150 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Spawn6"]
 position = Vector2( 0.133652, 0.100037 )
 shape = SubResource( 2 )
 
 [node name="Spawn7" type="Area2D" parent="."]
-position = Vector2( 314, 150 )
+position = Vector2( 334, 150 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Spawn7"]
 position = Vector2( 0.133652, 0.100037 )
 shape = SubResource( 2 )
 
 [node name="Spawn8" type="Area2D" parent="."]
-position = Vector2( 394, 150 )
+position = Vector2( 424, 150 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Spawn8"]
 position = Vector2( 0.133652, 0.100037 )
