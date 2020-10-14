@@ -1,21 +1,23 @@
+# Controls player detection, projectile firing, and node destruction
+# when hit by player's projectile
 extends KinematicBody2D
 
 const ENEMY_BULLET = preload("res://src/EnemyBullet.tscn")
-onready var raycaster = $PlayerChecker
+
 var _fire_delay := 0.0
 var _just_fired := false
-var _next_fire_time := 1.0
+var _next_fire_time := 1.2
 
+onready var raycaster = $PlayerChecker
+onready var _destroyed_sound = $DestroyedSound
 func _ready():
 	$AnimatedSprite.play("idle")
-	
 
 
 func _physics_process(delta):
 	if _just_fired:
 		_fire_delay = _fire_delay + 0.01
 	if raycaster.is_colliding():
-		
 		if _fire_delay == 0:
 			_fire()
 			_just_fired = true
@@ -31,6 +33,7 @@ func _on_HitBox_area_entered(area):
 		add_child(timer)
 		timer.start()
 		$AnimatedSprite.play("destroyed")
+		_destroyed_sound.play()
 		yield(timer, "timeout")
 		queue_free()
 	
