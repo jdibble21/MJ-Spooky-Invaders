@@ -14,6 +14,13 @@ func _physics_process(delta):
 
 func _on_HitBox_area_entered(area):
 	if area.is_in_group("player_bullet"):
+		$AnimationPlayer.stop(false)
+		var timer = Timer.new()
+		timer.set_wait_time(0.25)
+		add_child(timer)
+		timer.start()
+		$AnimatedSprite.play("destroyed")
+		yield(timer, "timeout")
 		emit_signal("bonus_destroyed")
 		print("BONUS HIT")
 		queue_free()
