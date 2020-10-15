@@ -89,3 +89,6 @@ shape = SubResource( 4 )
 [connection signal="area_exited" from="Spawn3" to="." method="_on_Spawn3_area_exited"]
 [connection signal="area_exited" from="Spawn4" to="." method="_on_Spawn4_area_exited"]
 [connection signal="area_exited" from="Spawn5" to="." method="_on_Spawn5_area_exited"]
+[connection signal="area_exited" from="Spawn6" to="." method="_on_Spawn6_area_exited"]
+[connection signal="area_exited" from="Spawn7" to="." method="_on_Spawn7_area_exited"]
+[connection signal="area_exited" from="Spawn8" to="." method="_on_Spawn8_area_exited"]

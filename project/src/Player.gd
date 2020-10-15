@@ -8,8 +8,10 @@ const BULLET = preload("res://src/PlayerBullet.tscn")
 export var velocity := 600
 
 var _current_pos := Vector2()
+var _screensize
 
 func _ready():
+	_screensize = get_viewport_rect().size
 	pass
 
 
@@ -20,7 +22,9 @@ func _process(delta):
 		_current_pos.x -= velocity * delta
 	if Input.is_action_pressed("move_right"):
 		_current_pos.x += velocity * delta
-	self.position = _current_pos
+	position = _current_pos
+	
+	
 	
 	
 func _fire():
