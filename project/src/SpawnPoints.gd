@@ -68,10 +68,6 @@ func _bonus_spawn():
 	var new_bonus = BONUS_ENEMY.instance()
 	new_bonus.connect("bonus_destroyed",self,"_on_bonus_destroyed")
 	add_child(new_bonus)
-	if random_spawn == 0:
-		new_bonus.position = _bonus_one
-	if random_spawn == 1:
-		new_bonus.position = _bonus_two
 	
 	
 func _on_bonus_destroyed():

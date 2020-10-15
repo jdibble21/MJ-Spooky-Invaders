@@ -32,3 +32,12 @@ func _fire():
 	owner.add_child(b)
 	b.transform = $Muzzle.global_transform
 	
+
+
+func _on_HitBox_area_entered(area):
+	#if area.is_in_group("enemy_bullet"):
+	print("Player is hit!!")
+
+
+func _on_HitBox_body_entered(body):
+	print("player is hit!")
