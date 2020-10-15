@@ -8,12 +8,11 @@ var _current_pos := Vector2()
 func _ready():
 	$AnimationPlayer.play("moving_right")
 	$AnimatedSprite.play("active")
-func _physics_process(delta):
-	pass
 
 
 func _on_HitBox_area_entered(area):
 	if area.is_in_group("player_bullet"):
+		$DestroyedSound.play()
 		$AnimationPlayer.stop(false)
 		var timer = Timer.new()
 		timer.set_wait_time(0.25)
