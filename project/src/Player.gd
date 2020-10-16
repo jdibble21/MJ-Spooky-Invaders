@@ -35,7 +35,6 @@ func _fire():
 	
 
 func _on_HitBox_area_entered(area):
-	print("lives left: " + str(lives))
 	if lives > 0:
 		$AnimationPlayer.play("player_hit")
 		lives = lives - 1
