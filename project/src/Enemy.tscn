@@ -55,7 +55,7 @@ shape = SubResource( 3 )
 
 [node name="PlayerChecker" type="RayCast2D" parent="."]
 enabled = true
-cast_to = Vector2( 0, 500 )
+cast_to = Vector2( 0, 400 )
 
 [node name="Muzzle" type="Position2D" parent="."]
 position = Vector2( 0, 25 )
