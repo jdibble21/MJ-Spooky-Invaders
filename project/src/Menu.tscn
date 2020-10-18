@@ -3,7 +3,7 @@
 [ext_resource path="res://src/Menu.gd" type="Script" id=1]
 [ext_resource path="res://assets/character_sprites/enemy_skull_1.png" type="Texture" id=2]
 [ext_resource path="res://assets/character_sprites/enemy_skull_0.png" type="Texture" id=3]
-[ext_resource path="res://assets/font_assets/Spantaran-GE2D.ttf" type="DynamicFontData" id=4]
+[ext_resource path="res://assets/font_assets/Audiowide-Regular.ttf" type="DynamicFontData" id=4]
 [ext_resource path="res://assets/level_assets/game_background.png" type="Texture" id=5]
 [ext_resource path="res://assets/level_assets/border.png" type="Texture" id=6]
 
@@ -93,10 +93,10 @@ __meta__ = {
 }
 
 [node name="Label" type="Label" parent="."]
-margin_left = 369.0
+margin_left = 344.0
 margin_top = 112.0
-margin_right = 672.0
-margin_bottom = 155.0
+margin_right = 718.0
+margin_bottom = 164.0
 custom_fonts/font = SubResource( 2 )
 text = "Spooky Invaders"
 __meta__ = {

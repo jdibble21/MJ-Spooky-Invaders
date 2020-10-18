@@ -31,10 +31,6 @@ func _process(_delta):
 		queue_free()
 		get_tree().get_root().add_child(_menu_scene.instance())
 		
-	if Input.is_action_pressed("restart"):
-		print("restart!")
-		get_tree().reload_current_scene()
-		
 		
 func _score():
 	_points += 2
