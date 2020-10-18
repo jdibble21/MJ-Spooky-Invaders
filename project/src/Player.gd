@@ -7,7 +7,7 @@ const BULLET = preload("res://src/PlayerBullet.tscn")
 
 export var velocity := 600
 
-var lives := 3
+var lives := 2
 var _current_pos := Vector2()
 var _screensize
 
