@@ -16,7 +16,7 @@ _global_script_class_icons={
 [application]
 
 config/name="MJ-Spooky-Invaders"
-run/main_scene="res://src/Level.tscn"
+run/main_scene="res://src/Menu.tscn"
 config/icon="res://icon.png"
 
 [display]
