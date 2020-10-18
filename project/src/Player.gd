@@ -39,8 +39,8 @@ func _fire():
 	
 	
 func _point_score():
-	print("player earned a point!")
 	emit_signal("point_earned")
+	
 	
 func _bonus_point_score():
 	emit_signal("bonus_point_earned")
@@ -52,6 +52,7 @@ func _on_HitBox_area_entered(area):
 		$DamageSound.play()
 		lives = lives - 1
 	if lives == 0:
+		set_process(false)
 		emit_signal("player_defeated")
 		var timer = Timer.new()
 		timer.set_wait_time(0.4)
@@ -64,9 +65,3 @@ func _on_HitBox_area_entered(area):
 		yield(timer, "timeout")
 		queue_free()
 
-func _on_HitBox_body_entered(body):
-	pass
-
-
-func _gameover_signal():
-	set_process(false)
