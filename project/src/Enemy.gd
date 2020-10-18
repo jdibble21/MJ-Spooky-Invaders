@@ -15,7 +15,7 @@ func _ready():
 	$AnimatedSprite.play("idle")
 
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	if _just_fired:
 		_fire_delay = _fire_delay + 0.01
 	if raycaster.is_colliding():

@@ -3,7 +3,7 @@
 extends Node2D
 
 var _points := 0
-var _game_over := false
+var _game_over_state := false
 
 onready var _menu_scene = load("res://src/Menu.tscn")
 onready var _gameplay_scene = load("res://src/Level.tscn")
@@ -23,8 +23,8 @@ func _ready():
 	_music_loop.play()
 	
 	
-func _process(delta):
-	if !_game_over:
+func _process(_delta):
+	if !_game_over_state:
 		_HUD_lives_label.text = "EXTRA LIVES: " + str($Player.lives - 1)
 		_HUD_score_label.text = "SCORE: " + str(_points)
 	if Input.is_action_pressed("back_to_menu"):
@@ -43,7 +43,7 @@ func _bonus_score():
 	
 	
 func _game_over():
-	_game_over = true
+	_game_over_state = true
 	_HUD.set_process(false)
 	_HUD_lives_label.text = "EXTRA LIVES: 0" 
 	_HUD_gameover_label.show()

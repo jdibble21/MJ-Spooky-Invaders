@@ -57,7 +57,7 @@ func _physics_process(delta):
 	position += transform.x * _current_velocity * delta
 	
 	
-func _process(delta):
+func _process(_delta):
 	if _can_spawn_bonus:
 		_bonus_spawn()
 	
@@ -70,7 +70,6 @@ func _spawn(spawn_position):
 		
 func _bonus_spawn():
 	_can_spawn_bonus = false
-	var random_spawn = randi()%1+0
 	var timer = Timer.new()
 	timer.set_wait_time(BONUS_SPAWN_DELAY)
 	add_child(timer)

@@ -13,7 +13,6 @@ var lives := 3
 var _current_pos := Vector2()
 var _screensize
 
-
 func _ready():
 	_screensize = get_viewport_rect().size
 	$AnimatedSprite.hide()
@@ -46,7 +45,7 @@ func _bonus_point_score():
 	emit_signal("bonus_point_earned")
 	
 	
-func _on_HitBox_area_entered(area):
+func _on_HitBox_area_entered(_area):
 	if lives > 0:
 		$AnimationPlayer.play("player_hit")
 		$DamageSound.play()

@@ -14,9 +14,6 @@ func _physics_process(delta):
 		queue_free()
 
 
-
-
-
 func _on_EnemyBullet_body_entered(body):
 	if !body.is_in_group("invader"):
 		queue_free()
