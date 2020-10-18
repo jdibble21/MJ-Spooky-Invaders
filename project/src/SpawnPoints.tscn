@@ -73,6 +73,62 @@ position = Vector2( 424, 150 )
 position = Vector2( 0.133652, 0.100037 )
 shape = SubResource( 2 )
 
+[node name="Spawn9" type="Area2D" parent="."]
+position = Vector2( 584, 71 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Spawn9"]
+position = Vector2( 0.133652, 0.100037 )
+shape = SubResource( 2 )
+
+[node name="Spawn10" type="Area2D" parent="."]
+position = Vector2( 664, 71 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Spawn10"]
+position = Vector2( 0.133652, 0.100037 )
+shape = SubResource( 2 )
+
+[node name="Spawn11" type="Area2D" parent="."]
+position = Vector2( 744, 71 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Spawn11"]
+position = Vector2( 0.133652, 0.100037 )
+shape = SubResource( 2 )
+
+[node name="Spawn12" type="Area2D" parent="."]
+position = Vector2( 824, 71 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Spawn12"]
+position = Vector2( 0.133652, 0.100037 )
+shape = SubResource( 2 )
+
+[node name="Spawn13" type="Area2D" parent="."]
+position = Vector2( 584, 150 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Spawn13"]
+position = Vector2( 0.133652, 0.100037 )
+shape = SubResource( 2 )
+
+[node name="Spawn14" type="Area2D" parent="."]
+position = Vector2( 664, 150 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Spawn14"]
+position = Vector2( 0.133652, 0.100037 )
+shape = SubResource( 2 )
+
+[node name="Spawn15" type="Area2D" parent="."]
+position = Vector2( 744, 150 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Spawn15"]
+position = Vector2( 0.133652, 0.100037 )
+shape = SubResource( 2 )
+
+[node name="Spawn16" type="Area2D" parent="."]
+position = Vector2( 824, 150 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Spawn16"]
+position = Vector2( 0.133652, 0.100037 )
+shape = SubResource( 2 )
+
 [node name="SpawnBonus1" type="Area2D" parent="."]
 position = Vector2( 0, 270 )
 

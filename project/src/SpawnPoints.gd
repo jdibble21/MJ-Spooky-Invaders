@@ -1,6 +1,6 @@
 # Spawns initial enemies and handles respawning after a delay when enemies 
-# are destroyed
-
+# are destroyed. Repeating area_exit functions are necessary to specify unique points
+# and enable spawning to be completely separate from each instance
 extends Area2D
 
 const ENEMY = preload("res://src/Enemy.tscn")
@@ -25,12 +25,23 @@ onready var _spawn_five = $Spawn5.position
 onready var _spawn_six = $Spawn6.position
 onready var _spawn_seven = $Spawn7.position
 onready var _spawn_eight = $Spawn8.position
+onready var _spawn_nine = $Spawn9.position
+onready var _spawn_ten = $Spawn10.position
+onready var _spawn_eleven = $Spawn11.position
+onready var _spawn_twelve = $Spawn12.position
+onready var _spawn_thirteen = $Spawn13.position
+onready var _spawn_fourteen = $Spawn14.position
+onready var _spawn_fifteen = $Spawn15.position
+onready var _spawn_sixteen = $Spawn16.position
 onready var _bonus_one = $SpawnBonus1.position
 onready var _bonus_two = $SpawnBonus2.position
 
 func _ready():
 	var pos_array = [_spawn_one,_spawn_two,_spawn_three,
-	_spawn_four,_spawn_five, _spawn_six, _spawn_seven, _spawn_eight]
+	_spawn_four,_spawn_five, _spawn_six, _spawn_seven, 
+	_spawn_eight, _spawn_nine, _spawn_ten, _spawn_eleven,
+	 _spawn_twelve, _spawn_thirteen, _spawn_fourteen, 
+	_spawn_fifteen, _spawn_sixteen]
 	for current_pos in pos_array:
 		_spawn(current_pos)
 	_current_velocity = SPEED
@@ -39,7 +50,7 @@ func _ready():
 	
 	
 func _physics_process(delta):
-	if position.x >= _screen_edge_right/2:
+	if position.x >= _screen_edge_right/3:
 		_current_velocity = -SPEED
 	if position.x <= _screen_edge_left:
 		_current_velocity = SPEED
