@@ -59,7 +59,7 @@ collision_layer = 31
 
 [node name="MusicLoop" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 2 )
-volume_db = -5.474
+volume_db = -10.948
 
 [node name="HUD" parent="." instance=ExtResource( 5 )]
 
