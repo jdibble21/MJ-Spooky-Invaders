@@ -10,6 +10,7 @@ const SPEED := 600
 func _ready():
 	pass
 	
+	
 func _physics_process(delta):
 	position += transform.y * -SPEED * delta
 	if position.y <= 0:
@@ -23,7 +24,6 @@ func _on_PlayerBullet_body_entered(body):
 		emit_signal("hit_bonus_enemy")
 	queue_free()
 	
-
 
 func _on_PlayerBullet_area_entered(area):
 	if area.is_in_group("mask_barrier"):

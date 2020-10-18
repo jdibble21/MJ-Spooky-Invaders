@@ -2,7 +2,6 @@
 # barrier if contact is made
 extends Area2D
 
-
 onready var _left_barrier := $LeftBarrier
 onready var _center_barrier := $CenterBarrier
 onready var _right_barrier := $RightBarrier

@@ -34,6 +34,7 @@ func _fire():
 	b.connect("hit_enemy",self,"_point_score")
 	b.connect("hit_bonus_enemy",self,"_bonus_point_score")
 	owner.add_child(b)
+	$FireSound.play()
 	b.transform = $Muzzle.global_transform
 	
 	
