@@ -6,6 +6,7 @@ onready var _player = $Player
 onready var _spawn_points = $SpawnPoints
 onready var _music_loop = $MusicLoop
 onready var _HUD_lives_label = $HUD/LivesLabel
+onready var _HUD := $HUD
 
 func _ready():
 	_player.connect("player_defeated",self,"_game_over")
@@ -18,5 +19,6 @@ func _process(delta):
 
 func _game_over():
 	set_process(false)
+	_HUD.set_process(false)
 	_HUD_lives_label.text = "LIVES: 0" 
 	_music_loop.stop()

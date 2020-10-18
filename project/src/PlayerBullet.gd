@@ -16,3 +16,8 @@ func _physics_process(delta):
 func _on_PlayerBullet_body_entered(body):
 	queue_free()
 	
+
+
+func _on_PlayerBullet_area_entered(area):
+	if area.is_in_group("mask_barrier"):
+		queue_free()
