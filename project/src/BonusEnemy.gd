@@ -2,7 +2,6 @@ extends KinematicBody2D
 
 signal bonus_destroyed
 
-
 const SPEED := 200
 
 var _current_pos := Vector2()

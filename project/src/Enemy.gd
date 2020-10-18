@@ -8,7 +8,7 @@ var _fire_delay := 0.0
 var _just_fired := false
 var _next_fire_time := 1.2
 
-onready var raycaster = $PlayerChecker
+onready var _raycaster = $PlayerChecker
 onready var _destroyed_sound = $DestroyedSound
 
 func _ready():
@@ -18,8 +18,8 @@ func _ready():
 func _physics_process(_delta):
 	if _just_fired:
 		_fire_delay = _fire_delay + 0.01
-	if raycaster.is_colliding():
-		var collide_checker = raycaster.get_collision_point()
+	if _raycaster.is_colliding():
+		var collide_checker = _raycaster.get_collision_point()
 		if collide_checker.y < 500:
 			return
 		if _fire_delay == 0:
