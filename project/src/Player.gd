@@ -2,12 +2,14 @@
 extends KinematicBody2D
 
 signal player_defeated
+signal point_earned
+signal bonus_point_earned
 
 const BULLET = preload("res://src/PlayerBullet.tscn")
 
 export var velocity := 600
 
-var lives := 2
+var lives := 3
 var _current_pos := Vector2()
 var _screensize
 
@@ -30,13 +32,24 @@ func _process(delta):
 	
 func _fire():
 	var b = BULLET.instance()
+	b.connect("hit_enemy",self,"_point_score")
+	b.connect("hit_bonus_enemy",self,"_bonus_point_score")
 	owner.add_child(b)
 	b.transform = $Muzzle.global_transform
 	
-
+	
+func _point_score():
+	print("player earned a point!")
+	emit_signal("point_earned")
+	
+func _bonus_point_score():
+	emit_signal("bonus_point_earned")
+	
+	
 func _on_HitBox_area_entered(area):
 	if lives > 0:
 		$AnimationPlayer.play("player_hit")
+		$DamageSound.play()
 		lives = lives - 1
 	if lives == 0:
 		set_process(false)

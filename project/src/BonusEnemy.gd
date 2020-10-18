@@ -1,6 +1,8 @@
 extends KinematicBody2D
 
 signal bonus_destroyed
+
+
 const SPEED := 200
 
 var _current_pos := Vector2()
@@ -21,11 +23,9 @@ func _on_HitBox_area_entered(area):
 		$AnimatedSprite.play("destroyed")
 		yield(timer, "timeout")
 		emit_signal("bonus_destroyed")
-		print("BONUS HIT")
 		queue_free()
 
 
 func _on_animation_complete(_anim_name):
 	emit_signal("bonus_destroyed")
-	print("BONUS SELF DELETE")
 	queue_free()

@@ -2,6 +2,9 @@
 # an object is hit or edge of screen is reached
 extends Area2D
 
+signal hit_enemy
+signal hit_bonus_enemy
+
 const SPEED := 600
 
 func _ready():
@@ -14,6 +17,10 @@ func _physics_process(delta):
 		
 
 func _on_PlayerBullet_body_entered(body):
+	if body.is_in_group("invader"):
+		emit_signal("hit_enemy")
+	if body.is_in_group("bonus_enemy"):
+		emit_signal("hit_bonus_enemy")
 	queue_free()
 	
 

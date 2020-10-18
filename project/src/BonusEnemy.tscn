@@ -47,8 +47,10 @@ tracks/0/keys = {
 "values": [ Vector2( -200, 270 ), Vector2( 316.188, 401.522 ), Vector2( 685.298, 289.799 ), Vector2( 1193, 400.108 ) ]
 }
 
-[node name="BonusEnemy" type="KinematicBody2D"]
-position = Vector2( 1193, 400.108 )
+[node name="BonusEnemy" type="KinematicBody2D" groups=[
+"bonus_enemy",
+]]
+position = Vector2( -200, 270 )
 script = ExtResource( 4 )
 __meta__ = {
 "_edit_group_": true

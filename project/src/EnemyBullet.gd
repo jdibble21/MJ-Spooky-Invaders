@@ -2,7 +2,7 @@
 # an object is hit or edge of screen is reached
 extends Area2D
 
-const SPEED := 150
+const SPEED := 180
 var _screen_height = ProjectSettings.get_setting("display/window/size/height")
 
 func _ready():
