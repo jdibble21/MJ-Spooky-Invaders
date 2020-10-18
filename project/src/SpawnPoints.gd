@@ -46,11 +46,11 @@ func _ready():
 		_spawn(current_pos)
 	_current_velocity = SPEED
 	_screen_edge_right = get_viewport().size.x
-	_screen_edge_left = 0
+	_screen_edge_left = -100
 	
 	
 func _physics_process(delta):
-	if position.x >= _screen_edge_right/3:
+	if position.x >= 100:
 		_current_velocity = -SPEED
 	if position.x <= _screen_edge_left:
 		_current_velocity = SPEED
@@ -163,3 +163,83 @@ func _on_Spawn8_area_exited(area):
 		timer.start()
 		yield(timer, "timeout")
 		_spawn(_spawn_eight)
+
+
+func _on_Spawn9_area_exited(area):
+	if !(area.is_in_group("player_bullet")):
+		var timer = Timer.new()
+		timer.set_wait_time(RESPAWN_DELAY)
+		add_child(timer)
+		timer.start()
+		yield(timer, "timeout")
+		_spawn(_spawn_nine)
+
+
+func _on_Spawn10_area_exited(area):
+	if !(area.is_in_group("player_bullet")):
+		var timer = Timer.new()
+		timer.set_wait_time(RESPAWN_DELAY)
+		add_child(timer)
+		timer.start()
+		yield(timer, "timeout")
+		_spawn(_spawn_ten)
+
+
+func _on_Spawn11_area_exited(area):
+	if !(area.is_in_group("player_bullet")):
+		var timer = Timer.new()
+		timer.set_wait_time(RESPAWN_DELAY)
+		add_child(timer)
+		timer.start()
+		yield(timer, "timeout")
+		_spawn(_spawn_eleven)
+
+
+func _on_Spawn12_area_exited(area):
+	if !(area.is_in_group("player_bullet")):
+		var timer = Timer.new()
+		timer.set_wait_time(RESPAWN_DELAY)
+		add_child(timer)
+		timer.start()
+		yield(timer, "timeout")
+		_spawn(_spawn_twelve)
+
+
+func _on_Spawn13_area_exited(area):
+	if !(area.is_in_group("player_bullet")):
+		var timer = Timer.new()
+		timer.set_wait_time(RESPAWN_DELAY)
+		add_child(timer)
+		timer.start()
+		yield(timer, "timeout")
+		_spawn(_spawn_thirteen)
+
+
+func _on_Spawn14_area_exited(area):
+	if !(area.is_in_group("player_bullet")):
+		var timer = Timer.new()
+		timer.set_wait_time(RESPAWN_DELAY)
+		add_child(timer)
+		timer.start()
+		yield(timer, "timeout")
+		_spawn(_spawn_fourteen)
+
+
+func _on_Spawn15_area_exited(area):
+	if !(area.is_in_group("player_bullet")):
+		var timer = Timer.new()
+		timer.set_wait_time(RESPAWN_DELAY)
+		add_child(timer)
+		timer.start()
+		yield(timer, "timeout")
+		_spawn(_spawn_fifteen)
+
+
+func _on_Spawn16_area_exited(area):
+	if !(area.is_in_group("player_bullet")):
+		var timer = Timer.new()
+		timer.set_wait_time(RESPAWN_DELAY)
+		add_child(timer)
+		timer.start()
+		yield(timer, "timeout")
+		_spawn(_spawn_sixteen)

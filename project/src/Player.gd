@@ -52,12 +52,12 @@ func _on_HitBox_area_entered(area):
 		$DamageSound.play()
 		lives = lives - 1
 	if lives == 0:
-		set_process(false)
 		emit_signal("player_defeated")
 		var timer = Timer.new()
 		timer.set_wait_time(0.4)
 		add_child(timer)
 		timer.start()
+		$GameOverSound.play()
 		$Sprite.hide()
 		$AnimatedSprite.show()
 		$AnimatedSprite.play("destroyed")
@@ -66,3 +66,7 @@ func _on_HitBox_area_entered(area):
 
 func _on_HitBox_body_entered(body):
 	pass
+
+
+func _gameover_signal():
+	set_process(false)

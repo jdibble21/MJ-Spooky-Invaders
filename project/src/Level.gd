@@ -31,7 +31,6 @@ func _process(delta):
 		queue_free()
 		get_tree().get_root().add_child(_menu_scene.instance())
 	if Input.is_action_pressed("restart"):
-		
 		get_tree().reload_current_scene()
 		
 		

@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://src/Player.gd" type="Script" id=1]
 [ext_resource path="res://assets/character_sprites/player_sprite.png" type="Texture" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://assets/effect_animations/player_destroyed_0.png" type="Texture" id=6]
 [ext_resource path="res://assets/effect_animations/player_destroyed_2.png" type="Texture" id=7]
 [ext_resource path="res://assets/sound_assets/player_damage.ogg" type="AudioStream" id=8]
+[ext_resource path="res://assets/sound_assets/game_over_sound.ogg" type="AudioStream" id=9]
 
 [sub_resource type="CircleShape2D" id=1]
 radius = 17.0773
@@ -74,4 +75,8 @@ anims/player_hit = SubResource( 4 )
 [node name="DamageSound" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 8 )
 volume_db = 0.002
+
+[node name="GameOverSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 9 )
 [connection signal="area_entered" from="HitBox" to="." method="_on_HitBox_area_entered"]
+[connection signal="finished" from="GameOverSound" to="." method="_gameover_signal"]
