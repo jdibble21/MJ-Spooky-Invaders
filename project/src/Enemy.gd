@@ -12,7 +12,8 @@ onready var _raycaster = $PlayerChecker
 onready var _destroyed_sound = $DestroyedSound
 
 func _ready():
-	$AnimatedSprite.play("idle")
+	var random_num = randi()%2+1
+	$AnimatedSprite.play("idle_"+str(random_num))
 
 
 func _physics_process(_delta):
